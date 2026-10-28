@@ -1,1 +1,73 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChemEasy | Chemistry Assistant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f7f5;
+      color: #18352f;
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 20px;
+    }
+    .app {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px #0001;
+    }
+    h1 { color: #087f6b; }
+    input, button {
+      box-sizing: border-box;
+      width: 100%;
+      padding: 13px;
+      margin-top: 12px;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+    input { border: 1px solid #b9ccc6; }
+    button {
+      background: #087f6b;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    #result {
+      margin-top: 22px;
+      white-space: pre-wrap;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <main class="app">
+    <h1>🧪 ChemEasy</h1>
+    <p>Your chemistry learning assistant.</p>
+    <form id="searchForm">
+      <label for="chemical">Enter a reagent, catalyst, or compound</label>
+      <input id="chemical" placeholder="e.g. KMnO4" required>
+      <button type="submit">Explore Chemical</button>
+    </form>
+    <div id="result" aria-live="polite"></div>
+  </main>
+
+  <script>
+    const form = document.getElementById("searchForm");
+    const input = document.getElementById("chemical");
+    const result = document.getElementById("result");
+
+    form.addEventListener("submit", function(event) {
+      event.preventDefault();
+      const name = input.value.trim();
+      result.textContent =
+        "You searched for: " + name +
+        "\n\nChemEasy is ready for its chemistry database and AI connection. " +
+        "Those features will be added in the next steps.";
+    });
+  </script>
+</body>
+</html>
