@@ -1,0 +1,126 @@
+/* ==========================
+   CHEMEASY - HOME PAGE
+   ========================== */
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Website Background */
+body {
+    background-color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    color: #1769c2;
+}
+
+/* Main Container */
+.home-container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 55px 20px 30px;
+}
+
+/* Website Title */
+.home-header {
+    margin-top: 35px;
+    margin-bottom: 105px;
+    text-align: center;
+}
+
+.home-header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #1769c2;
+    letter-spacing: 1px;
+}
+
+/* Navigation Buttons */
+.home-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 38px;
+    width: 100%;
+}
+
+/* Individual Button */
+.home-button {
+    width: 310px;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    border: 2px solid #1769c2;
+    border-radius: 18px;
+
+    color: #1769c2;
+    background-color: #ffffff;
+
+    font-size: 23px;
+    font-weight: 600;
+    text-decoration: none;
+
+    transition: 0.25s ease;
+}
+
+/* Button Arrow */
+.home-button span {
+    font-size: 30px;
+    line-height: 1;
+}
+
+/* Button Hover Effect */
+.home-button:hover {
+    background-color: #1769c2;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Footer */
+.home-footer {
+    margin-top: auto;
+    padding-top: 65px;
+    text-align: center;
+}
+
+.home-footer p {
+    color: #1769c2;
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+
+    .home-header {
+        margin-bottom: 75px;
+    }
+
+    .home-header h1 {
+        font-size: 38px;
+    }
+
+    .home-button {
+        width: min(310px, 90%);
+        min-height: 65px;
+        font-size: 19px;
+    }
+
+    .home-navigation {
+        gap: 28px;
+    }
+
+    .home-footer p {
+        font-size: 12px;
+    }
+}
